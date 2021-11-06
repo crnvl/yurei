@@ -2,8 +2,9 @@
  Yurei is a fast and efficient scraper for LightShot/prnt.sc.
  
 # How to use
-First, make sure to install the latest version of node.js </br>
-After that, clone this repository and run ```node app.js``` in the repository's root directory. </br>
+First, make sure to install the latest version of node.js 
+After that, clone this repository, goes into it directory and install the dependencies with ```npm install``` 
+then you'll be able to run the app with ```node app.js```.
 Finally, have fun :)
 
 ##### Disclaimer
