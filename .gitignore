@@ -1,4 +1,5 @@
-content/
+content/*
+!content/.gitkeep
 
 # Logs
 logs

@@ -3,7 +3,7 @@
  
 # How to use
 First, make sure to install the latest version of node.js </br>
-After that, clone this repository and run ```mkdir content``` and ```node app.js``` in the repository's root directory. </br>
+After that, clone this repository and run ```node app.js``` in the repository's root directory. </br>
 Finally, have fun :)
 
 ##### Disclaimer
