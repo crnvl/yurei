@@ -25,6 +25,8 @@ async function getScreenshot(key) {
                     }
                 }
             } while (m);
+        }).catch((error) => {
+            console.log(`[ Y U R E I ${new Date().toISOString()} ] Error ${error}`)
         });
 }
 
