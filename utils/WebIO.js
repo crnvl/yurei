@@ -5,7 +5,7 @@ const { imageToText } = require("./TextDetect");
 
 async function getScreenshot(key) {
   await axios
-    .get(`https://prnt.sc/${key}`, { timeout: 2 })
+    .get(`https://prnt.sc/${key}`, { timeout: 10000 })
     .then((response) => {
       const sourcecode = response.data;
       const re = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g;
