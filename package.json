@@ -13,7 +13,9 @@
     "dependencies": {
         "axios": "^0.24.0",
         "dateformat": "^5.0.2",
-        "request": "^2.88.2"
+        "nodemon": "^2.0.14",
+        "request": "^2.88.2",
+        "tesseract.js": "^2.1.5"
     },
     "devDependencies": {
         "prettier": "^2.4.1"
