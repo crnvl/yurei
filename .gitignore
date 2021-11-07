@@ -80,3 +80,5 @@ typings/
 
 # IDE
 .idea
+textdata.json
+eng.traineddata
