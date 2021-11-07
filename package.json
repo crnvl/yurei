@@ -1,19 +1,23 @@
 {
-  "name": "yurei",
-  "version": "1.0.0",
-  "description": "Yurei is a fast and efficient scraper for LightShot/prnt.sc. Its purpose is to archive and re-publish insecurely saved user content such as screenshots on prnt.sc",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.24.0",
-    "dateformat": "^5.0.2",
-    "nodemon": "^2.0.14",
-    "request": "^2.88.2",
-    "tesseract.js": "^2.1.5"
-  }
+    "name": "yurei",
+    "version": "1.0.0",
+    "description": "Yurei is a fast and efficient scraper for LightShot/prnt.sc. Its purpose is to archive and re-publish insecurely saved user content such as screenshots on prnt.sc",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "fmt": "prettier -w . --tab-width=4 --single-quote=true --print-width=120"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.24.0",
+        "dateformat": "^5.0.2",
+        "nodemon": "^2.0.14",
+        "request": "^2.88.2",
+        "tesseract.js": "^2.1.5"
+    },
+    "devDependencies": {
+        "prettier": "^2.4.1"
+    }
 }
