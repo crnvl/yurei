@@ -1,0 +1,31 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+    # Triggers the workflow on push or pull request events but only for the main branch
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+jobs:
+    prettier:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  # Make sure the actual branch is checked out when running on pull requests
+                  ref: ${{ github.head_ref }}
+
+            - name: Prettify code
+              uses: creyD/prettier_action@v4.0
+              with:
+                  # This part is also where you can pass other options, for example:
+                  prettier_options: --check . --tab-width=4 --single-quote=true --print-width=120
