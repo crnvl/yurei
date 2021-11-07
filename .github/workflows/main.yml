@@ -20,12 +20,14 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2
-              with:
-                  # Make sure the actual branch is checked out when running on pull requests
-                  ref: ${{ github.head_ref }}
 
-            - name: Prettify code
-              uses: creyD/prettier_action@v4.0
+            - name: Setup node
+              uses: actions/setup-node@v2
               with:
-                  # This part is also where you can pass other options, for example:
-                  prettier_options: --check . --tab-width=4 --single-quote=true --print-width=120
+                  node-version: '16'
+
+            - name: install dependencies
+              run: npm i
+
+            - name: Check formatting
+              run: npm run check-fmt
