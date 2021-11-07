@@ -12,13 +12,12 @@ async function getScreenshot(key) {
       const s = sourcecode;
       let m;
 
-      do {
-        m = re.exec(s);
-        if (m) {
-          const m1 = m[1].toString().trim();
-          if (m1.startsWith("/image/")) {
-            const now = new Date();
-            console.log(`\x1b[7m\x1b[34m[ Y U R E I ${now.toISOString()} ]\x1b[0m Found ${m1}`);
+            do {
+                m = re.exec(s);
+                if (m) {
+                    const m1 = m[1].toString().trim();
+                    if (m1.startsWith('/image/')) {
+                        console.log(`\x1b[7m\x1b[34m[ Y U R E I ${new Date().toISOString()} ]\x1b[0m Found ${m1}`)
 
             download("https://image.prntscr.com" + m1, `./content/${m1.replace("/image/", "")}`, () => {
               console.log(`\x1b[7m\x1b[36m[ Y U R E I ${new Date().toISOString()} ]\x1b[0m Downloaded ${m1}`);
