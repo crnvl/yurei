@@ -1,5 +1,5 @@
 const save = require('./yurei.json');
-const {getScreenshot} = require('./utils/WebIO');
+const { getScreenshot } = require('./utils/WebIO');
 
 process.on('uncaughtException', function (err) {
     console.log(`\x1b[7m\x1b[31m[ Y U R E I ${new Date().toISOString()} ]\x1b[0m ERROR @ '${err}'`);
@@ -14,10 +14,10 @@ function init() {
 }
 
 async function loadLastKey() {
-    const key = stringGen(6)
-    await getScreenshot(key)
-    console.log(`\x1b[7m[ Y U R E I ${new Date().toISOString()} ]\x1b[0m Trying Key '${key}'`)
-    await loadLastKey()
+    const key = stringGen(6);
+    await getScreenshot(key);
+    console.log(`\x1b[7m[ Y U R E I ${new Date().toISOString()} ]\x1b[0m Trying Key '${key}'`);
+    await loadLastKey();
 }
 
 function stringGen(len) {
@@ -30,4 +30,4 @@ function stringGen(len) {
     return text;
 }
 
-init()
+init();

@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "fmt": "prettier -w . --tab-width=4 --single-quote=true --print-width=120"
+        "fmt": "prettier -w .",
+        "check-fmt": "prettier -c ."
     },
     "keywords": [],
     "author": "",
